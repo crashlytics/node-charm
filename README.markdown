@@ -171,6 +171,12 @@ charm.insert(mode, n)
 Insert space into the terminal. `insert` is the opposite of` delete`,
 and the arguments are the same.
 
+charm.scroll(amt)
+-----------------
+
+Scrolls the terminal `amt` lines. Positive is a scroll up, with new lines coming in at the bottom.
+Negative amount scrolls down, with new lines at the top.
+
 charm.display(attr)
 -------------------
 

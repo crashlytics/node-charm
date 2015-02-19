@@ -185,6 +185,15 @@ Charm.prototype.column = function (x) {
     return this;
 };
 
+Charm.prototype.scroll = function(amt) {
+    if (amt < 0) {
+        this.write(encode('[' + -amt + 'T'));
+    } else if (amt > 0) {
+        this.write(encode('[' + amt + 'S'));
+    }
+    return this;
+};
+
 Charm.prototype.push = function (withAttributes) {
     this.write(encode(withAttributes ? '7' : '[s'));
     return this;
